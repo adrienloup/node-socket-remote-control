@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Node Remote Control</title>
+	<link rel="stylesheet" type="text/css" href="/public/css/style.css">
+</head>
+<body>
+	<div id="main">
+		<nav id="nav">
+			<ul>
+				<li><a class="nav__item" href="/"><span>Home</span></a></li>
+				<li><a class="nav__item" href="/about"><span>About</span></a></li>
+				<li><a class="nav__item" href="/contact"><span>Contact</span></a></li>
+			</ul>
+		</nav>
+		<div id="content">{% block content %}{% endblock %}</div>
+		<div id="control">
+			<div id="control__text" class="step-1">
+				<div class="step-1"><p>Take control with your smartphone</p></div>
+				<div class="step-2"><div id="qrcode"><img src="https://chart.googleapis.com/chart?chs=200x200&cht=qr&chld=L|1&chl=http://{myIP}:8080/remote-control&choe=UTF-8" width="100" height="100" alt=""></div><p>Scan this QR code and enter this code <span id="control__value">0000 </span><br>A wifi connection is advised</p></div>
+				<div id="live-the-experience">Live the experience</div>
+			</div>
+		</div>
+		<div id="message">Connected</div>
+	</div>
+	<script src="/public/js/jquery-3.3.1.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="/public/js/app.js"></script>
+
+</body>
+</html>

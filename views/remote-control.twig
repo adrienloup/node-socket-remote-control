@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+	<title>Node Remote Control</title>
+	<meta name="viewport" content="width=device-width,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="/public/css/remote-control.css">
+</head>
+<body>
+	<div id="remote-control">
+		<div id="screen-display">
+			<span><span></span></span><span><span></span></span><span><span></span></span><span><span></span></span>
+		</div>
+		<div id="keypad">
+			<ul><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li><li>0</li></ul>
+		</div>
+		<div id="tabs">
+			<ul>
+				<li><a href="/" class="tab">Home</a></li>
+				<li><a href="/about" class="tab">About</a></li>
+				<li><a href="/contact" class="tab">Contact</a></li>
+			</ul>
+			<div id="control-arrow">
+				<div id="control-arrow__up" class="arrow up"></div>
+				<div id="control-arrow__down" class="arrow"></div>
+			</div>
+		</div>
+		<div id="disconnect"><span></span></div>
+		<div id="value"></div>
+	</div>
+	<script src="/public/js/jquery-3.3.1.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="/public/js/remote-control.js"></script>
+</body>
+</html>

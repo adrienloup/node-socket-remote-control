@@ -1,0 +1,217 @@
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+*,
+::after,
+::before { box-sizing: border-box }
+
+*,
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html { overflow: hidden }
+
+body {
+  background: #fafafa;
+  font: 20px/1 sans-serif;
+  color: #131214;
+}
+
+#remote-control.active #keypad,
+#remote-control.active #screen-display,
+#value { display: none }
+
+#remote-control {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  position: relative;
+}
+
+#disconnect {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: 1px solid #131214;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 3;
+}
+
+#disconnect span {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  border: 1px solid #131214;
+  border-radius: 50%;
+}
+
+#disconnect:after,
+#disconnect:before {
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  content: "";
+}
+
+#disconnect:before {
+  width: 9px;
+  height: 16px;
+  top: 6px;
+  z-index: 2;
+  background: #fff;
+}
+
+#disconnect:after {
+  width: 1px;
+  height: 10px;
+  top: 10px;
+  z-index: 3;
+  background: #131214;
+}
+
+#screen-display {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+#screen-display span {
+  width: 30px;
+  height: 40px;
+  font-size: 40px;
+  line-height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #131214;
+  font-weight: 700;
+}
+
+#screen-display span span {
+  width: 10px;
+  height: 2px;
+  background: #131214;
+}
+
+#keypad {
+  width: 280px;
+  position: relative;
+  z-index: 3;
+  margin: 0 auto;
+}
+
+#keypad ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+}
+
+#keypad li {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  border-radius: 50%;
+  font-size: 30px;
+  border: 1px solid #131214;
+  line-height: 30px;
+  color: #131214;
+  cursor: pointer;
+}
+
+#tabs {
+  display: none;
+  width: 100%;
+}
+
+.active #tabs{ display: block }
+
+#tabs ul {
+  width: 100%;
+  list-style-type: none;
+}
+
+#tabs li {
+  width: 250px;
+  height: 60px;
+  padding: 5px 0;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#tabs a {
+  display: block;
+  padding: 10px 0;
+  border: 1px solid #131214;
+  font-size: 22px;
+  text-decoration: none;
+  border-radius: 10px;
+  line-height: 30px;
+  color: #131214;
+}
+
+#control-arrow {
+  width: 100%;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 0;
+}
+
+.arrow {
+  width: 120px;
+  height: 50px;
+  margin: 0 5px;
+  border-radius: 8px;
+  border: 1px solid #131214;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+
+.arrow::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-top: 1px solid #131214;
+  border-right: 1px solid #131214;
+  transform: rotate(135deg);
+  margin: auto;
+  position: relative;
+  top: -5px;
+}
+
+.arrow.up::before {
+  transform: rotate(-45deg);
+  top: 5px;
+}

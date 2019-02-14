@@ -1,0 +1,17 @@
+{% extends (partial ? 'partial_layout.twig' : 'layout.twig') %}
+
+{% block content %}
+<div id="panels">
+	<div class="panel panel-1 active">
+		<h2>Home<br> first slide</h2>
+	</div>
+	<div class="panel panel-2">
+		<h2>Home<br> second slide</h2>
+	</div>
+	<div class="panel panel-3">
+		<h2>Home<br> last slide</h2>
+	</div>
+</div>
+<div class="arrow arrow--up disable"></div>
+<div class="arrow arrow--down"></div>
+{% endblock %}
