@@ -102,7 +102,7 @@
     previousPanel = currentPanel
     currentPanel = a
 
-    $('.panel').removeClass('active previousPanel')
+    $('.panel').removeClass('active previous-panel')
     $('.panel-' + a).addClass('active')
 	
    if (b) {
@@ -113,7 +113,7 @@
 
     if (a > 1) {
       while(--a) {
-        $('.panel-' + a).addClass('previousPanel')
+        $('.panel-' + a).addClass('previous-panel')
       }
     }
 

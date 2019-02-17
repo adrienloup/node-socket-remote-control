@@ -1,5 +1,5 @@
 (function($, window, undefined) {
-
+  
   var body = $('body')
       ,socket = io.connect('http://{myIP}:8080')
       ,number = 0
